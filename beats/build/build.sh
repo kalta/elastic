@@ -1,0 +1,1 @@
+docker build -t netcomposer/beats:5.0.2-1 .
