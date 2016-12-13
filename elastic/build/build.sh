@@ -1,1 +1,0 @@
-docker build -t netcomposer/elasticsearch:5.0.2-1 .
