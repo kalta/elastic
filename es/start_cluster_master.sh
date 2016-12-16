@@ -8,6 +8,7 @@ docker create \
 	--name $NAME \
 	--network elastic \
 	--hostname $NAME \
+	--network-alias elastic \
 	-v elastic_master_data:/usr/share/elasticsearch/data \
 	--env "ES_JAVA_OPTS=-Xms1g -Xmx1g" \
 	$IMAGE \
