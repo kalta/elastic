@@ -17,7 +17,7 @@ docker create --rm \
 		-Ecluster.name="NetComposer" \
 		-Ediscovery.zen.ping.unicast.hosts=127.0.0.1:9300
 
-docker network connect nginx $NAME
+docker network connect openresty $NAME
 
 docker start -a $NAME
 

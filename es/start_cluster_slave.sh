@@ -17,6 +17,6 @@ docker create --rm \
 		-Ehttp.host="_eth2_" \
 		-Ediscovery.zen.ping.unicast.hosts=elastic_master:9300
 
-docker network connect nginx $NAME
+docker network connect openresty $NAME
 
 docker start -a $NAME
