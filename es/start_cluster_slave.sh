@@ -4,7 +4,7 @@ IMAGE=netcomposer/elasticsearch:5.0.2-3
 
 docker rm $NAME > /dev/null 2>&1
 
-docker create \
+docker run -d \
 	--name $NAME \
 	--network elastic \
 	--hostname $NAME \
@@ -14,10 +14,5 @@ docker create \
 	$IMAGE \
 		-Enode.name="$NAME" \
 		-Ecluster.name="NetComposer" \
-		-Etransport.host="_eth0_" \
-		-Ehttp.host="_eth2_" \
-		-Ediscovery.zen.ping.unicast.hosts=elastic_master:9300 && \
+		-Ediscovery.zen.ping.unicast.hosts=elastic_master:9300
 
-docker network connect openresty $NAME	&& \
-
-docker start $NAME
